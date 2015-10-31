@@ -1,4 +1,5 @@
 NameOfFile = '00002.vcf'
 
-with open(NameOfFile) as original_file:
-    contacts = [[float(digit) for digit in line.split()] for line in original_file]
+lines = [line.rstrip('\n') for line in open(NameOfFile)]
+for line in lines:
+    print line
