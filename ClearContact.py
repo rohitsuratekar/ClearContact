@@ -10,10 +10,11 @@ for line in lines:
 
 for line in lines:
     if any(word in line for word in listofwords):
-        fh2 = open('cleraed.vcf','a')
+        fh2 = open('cleraed_with_all_data.vcf','a')
         fh2.write(line)
         fh2.write('\n')
         fh2.close()
         if 'BEGIN:' in line:
             newcontacts = newcontacts+1
+
 print ("Original contacts:%d and New Contacts:%d")%(numberofcontacts,newcontacts)
